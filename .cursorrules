@@ -1,0 +1,70 @@
+{
+  "editor": {
+    "formatOnSave": true,
+    "tabSize": 2,
+    "insertSpaces": true,
+    "rulers": [100]
+  },
+  "ai": {
+    "conversationContext": {
+      "includeFiles": [
+        "src/components/workflow/**/*.tsx",
+        "src/lib/mastra/**/*.ts",
+        "src/app/dashboard/workflows/**/*.tsx"
+      ],
+      "excludeFiles": [
+        "node_modules/**",
+        "**/*.js.map",
+        "**/*.d.ts"
+      ]
+    },
+    "commit": {
+      "staged": true,
+      "summarizeFirst": true
+    },
+    "defaultSearchScope": {
+      "include": [
+        "src/components/workflow/**/*.tsx",
+        "src/lib/mastra/**/*.ts",
+        "src/app/dashboard/**/*.tsx"
+      ],
+      "exclude": [
+        "node_modules/**"
+      ]
+    }
+  },
+  "linter": {
+    "ignorePatterns": [
+      "node_modules",
+      "dist",
+      ".next",
+      "public"
+    ],
+    "typescript": {
+      "rules": {
+        "noUnusedLocals": "warn",
+        "noUnusedParameters": "warn",
+        "noImplicitAny": "error"
+      }
+    }
+  },
+  "reactFlow": {
+    "componentAliases": {
+      "AgentNode": "src/components/workflow/nodes/agent-node.tsx",
+      "ToolNode": "src/components/workflow/nodes/tool-node.tsx",
+      "ConditionNode": "src/components/workflow/nodes/condition-node.tsx",
+      "WorkflowEditor": "src/components/workflow/workflow-editor.tsx"
+    },
+    "importReplacements": {
+      "reactflow": "@xyflow/react",
+      "reactflow/dist/style.css": "@xyflow/react/dist/style.css"
+    }
+  },
+  "mastra": {
+    "componentAliases": {
+      "Agent": "src/lib/mastra/agent.ts",
+      "Workflow": "src/lib/mastra/workflow.ts",
+      "Examples": "src/lib/mastra/examples.ts"
+    }
+  }
+} 
