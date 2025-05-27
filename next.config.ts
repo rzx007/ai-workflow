@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const config = {
+  serverExternalPackages: ["@mastra/*"],
+  // 其他配置保持不变
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
-export default nextConfig;
+export default config;

@@ -1,3 +1,4 @@
+import { WorkflowBuilder } from "@/app/components/WorkflowBuilder";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -60,6 +61,13 @@ export default function HomePage() {
           基于Next.js、Mastra和@xyflow/react构建
         </p>
       </footer>
+
+      <main className="container mx-auto py-8">
+        <h1 className="text-3xl font-bold mb-8">AI 工作流编排</h1>
+        <div className="max-w-2xl mx-auto">
+          <WorkflowBuilder />
+        </div>
+      </main>
     </div>
   );
 }
