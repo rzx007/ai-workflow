@@ -1,3 +1,4 @@
+"use client";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -5,7 +6,10 @@ export const metadata: Metadata = {
   title: "仪表板 | AI工作流平台",
 };
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  // 用于模拟网络延迟
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
   return (
     <>
       <div className="grid auto-rows-min gap-4 md:grid-cols-3">

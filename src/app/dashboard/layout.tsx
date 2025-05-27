@@ -13,6 +13,11 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "仪表板 | AI工作流平台",
+};
 
 export default function DashboardLayout({
   children,
